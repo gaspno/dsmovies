@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { Movie } from 'types/movie';
 import { base_Url } from 'utils/request';
 import { validateEmail } from 'utils/validate';
@@ -44,7 +44,7 @@ function FormCard({movieId}:Props) {
             }
         }
         axios(config).then(response=>{
-            console.log(response.data);
+            
             navigate("/");
         });
     }
